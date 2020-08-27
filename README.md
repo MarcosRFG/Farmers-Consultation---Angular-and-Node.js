@@ -23,7 +23,7 @@ PORTUGUÊS
 # Clone e Instalação do projeto
     Primeiro, é necessário fazer o clone da aplicação do GitHub:
 
-    comando: git clone XXXXXXXX
+    comando: git clone https://github.com/MarcosRFG/Farmers-Consultation-Angular-and-Node.js.git
 
     Na pasta clonada, terão dois projetos, o SPA e a API, é necessário baixar as dependências de cada um deles.
     Vamos começar pelo SPA (entre na pasta spa-angular-farmer):
@@ -95,7 +95,7 @@ ENGLISH
 # Project clone and installation
     First, you need to clone the GitHub application:
 
-    command: git clone XXXXXXXX
+    command: git clone https://github.com/MarcosRFG/Farmers-Consultation-Angular-and-Node.js.git
 
     In the cloned folder, there will be two projects, the SPA and the API, it is necessary to download the dependencies of each one of them.
     Let's start with the SPA (enter the spa-angular-farmer folder):
