@@ -66,6 +66,10 @@ PORTUGUÊS
         Para rodar os testes unitários:
 
         comando: npm test
+        
+        Para rodar os testes unitários com coverage:
+        
+        comando: npm run test-coverage
 
         Após a conclusão, será gerado o coverage em /coverage/lcov-report/
 
@@ -142,6 +146,10 @@ ENGLISH
         To run unit tests:
 
         command: npm test
+        
+        To run unit tests with coverage:
+        
+        command: npm run test-coverage
 
         Upon completion, coverage will be generated in /coverage/lcov-report/
 
