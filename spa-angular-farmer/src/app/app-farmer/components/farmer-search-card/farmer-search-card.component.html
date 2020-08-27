@@ -1,0 +1,8 @@
+<form class="search-form" [formGroup]="formSearch">
+  <mat-form-field class="width-100">
+    <mat-label>Nome ou Doc #</mat-label>
+    <mat-icon matPrefix>search</mat-icon>
+    <input matInput placeholder="Marcos" formControlName="valueSearch">
+    <mat-icon class="pointer" matSuffix (click)="getDetailsFarmers()">arrow_forward</mat-icon>
+  </mat-form-field>
+</form>

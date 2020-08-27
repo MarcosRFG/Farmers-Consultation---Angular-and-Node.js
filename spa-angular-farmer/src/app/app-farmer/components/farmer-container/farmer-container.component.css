@@ -1,0 +1,16 @@
+table {
+    width: 100%;
+}
+
+.toolbar {
+    background-color: #624963;
+    color: #f9f9f9;
+}
+
+.bg-container {
+    background-color: #f4f4f4;
+}
+
+.wating-search-icon {
+    font-size: 50px;
+}

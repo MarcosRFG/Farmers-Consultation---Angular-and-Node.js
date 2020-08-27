@@ -1,0 +1,76 @@
+<mat-toolbar class="toolbar">
+  <span>Consulta de Agricultores</span>
+</mat-toolbar>
+
+<mat-card class="m-15 p-15 bg-container">
+  <mat-label class="fs-14">Aqui você poderá fazer a consulta de agricultores utilizando o nome ou documento.</mat-label>
+  <farmer-search-card
+    (onErrorService)="setErrorService($event)"
+    (onFarmerSelectedEvent)="mySelectedFarmer($event)"
+    [farmerSearchAbstractProvider]="myFarmerSearchProvider">
+  </farmer-search-card>
+</mat-card>
+
+<mat-card class="m-15 p-15 bg-container">
+  <ng-container *ngIf="listFarmer === null && !errorService">
+    <div class="center mt-30">
+      <mat-icon class="wating-search-icon" matPrefix>search</mat-icon>
+    </div>
+    <div class="wating-search-text center mt-10 mb-30">
+      <mat-label class="fs-14">Aguardando a consulta</mat-label>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="listFarmer === null && errorService">
+    <div class="center mt-30">
+      <mat-icon class="wating-search-icon" matPrefix>report_problem</mat-icon>
+    </div>
+    <div class="wating-search-text center mt-10 mb-30">
+      <mat-label class="fs-14">Ocorreu um erro ao realizar a consulta. Por favor, tente novamente</mat-label>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="listFarmer && listFarmer.length === 0">
+    <div class="center mt-30">
+      <mat-icon class="wating-search-icon" matPrefix>error_outline</mat-icon>
+    </div>
+    <div class="wating-search-text center mt-10 mb-30">
+      <mat-label class="fs-14">Não encontramos dados para a consulta realizada</mat-label>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="listFarmer && listFarmer.length > 0">
+    <div>
+      <div class="width-50 left">
+        <strong>Agricultores</strong>
+      </div>
+      <div class="width-50 right text-right mb-10">
+        <mat-label class="fs-12">Exibindo {{listFarmer.length }} resultado(s)</mat-label>
+      </div>
+    </div>
+
+    <table mat-table [dataSource]="listFarmer" class="mat-elevation-z8">
+      <ng-container matColumnDef="sender">
+        <th mat-header-cell *matHeaderCellDef>Nome</th>
+        <td mat-cell *matCellDef="let farmer"> {{farmer.name}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="doc">
+        <th mat-header-cell *matHeaderCellDef>Doc #</th>
+        <td mat-cell *matCellDef="let farmer"> {{farmer.document.documentNumber | cpf }} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef>Endereço</th>
+        <td mat-cell *matCellDef="let farmer"> {{farmer.address.address}} </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </ng-container>
+</mat-card>
+
+
+
+
