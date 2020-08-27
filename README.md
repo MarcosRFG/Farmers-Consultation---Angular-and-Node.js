@@ -24,6 +24,10 @@ PORTUGUÊS
     Primeiro, é necessário fazer o clone da aplicação do GitHub:
 
     comando: git clone https://github.com/MarcosRFG/Farmers-Consultation-Angular-and-Node.js.git
+    
+    Entre na pasta Farmers-Consultation-Angular-and-Node.js e passe para a branch develop:
+    
+    comando: git checkout develop
 
     Na pasta clonada, terão dois projetos, o SPA e a API, é necessário baixar as dependências de cada um deles.
     Vamos começar pelo SPA (entre na pasta spa-angular-farmer):
@@ -96,6 +100,10 @@ ENGLISH
     First, you need to clone the GitHub application:
 
     command: git clone https://github.com/MarcosRFG/Farmers-Consultation-Angular-and-Node.js.git
+    
+    Go to the Farmers-Consultation-Angular-and-Node.js folder and switch to the develop branch:
+    
+    command: git checkout develop
 
     In the cloned folder, there will be two projects, the SPA and the API, it is necessary to download the dependencies of each one of them.
     Let's start with the SPA (enter the spa-angular-farmer folder):
