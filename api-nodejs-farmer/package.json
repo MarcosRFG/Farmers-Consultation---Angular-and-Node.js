@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "nyc --report-dir=./coverage --reporter=lcov --reporter=text mocha -R spec tests/*.test.js"
+    "test": "mocha -R spec tests/*.test.js",
+    "test-coverage": "nyc --report-dir=./coverage --reporter=lcov --reporter=text mocha -R spec tests/*.test.js"
   },
   "keywords": [
     "farmers",
